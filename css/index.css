@@ -40,6 +40,47 @@ main .main-intro {
   margin: auto;
   padding-bottom: 8vh;
 }
+header-main-logo {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.header-main-logo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.header-main-logo:hover .header-main-logo-inner {
+  transform: rotateY(180deg);
+}
+
+.header-main-logo-front, .header-main-logo-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.header-main-logo-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.header-main-logo-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
 
 .index-section-h3 {
   font-size: 18px;
@@ -49,9 +90,10 @@ main .main-intro {
   z-index: 100;
 }
 .button {
+  background-color:rgb(192, 184, 194) ;
   border-radius: 12px;
   border: none;
-  color: black;
+  color: rgb(107, 11, 103) ;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -59,13 +101,15 @@ main .main-intro {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 .button:hover {
-  color: rgb(107, 11, 103);
-  background-color: rgba(255, 255, 255, 0.2);
-  transition-duration: 5s;
+  color: rgb(234, 227, 237);
+  background-color: rgba(178, 9, 193, 0.951);
+  transition-duration: 0.35s;
   
 }
+
 
 /* .viewResume {
   background-color: rgb(212, 84, 148);
@@ -79,11 +123,13 @@ main .main-intro {
   border: 2px solid rgb(251, 208, 215);
   border-radius: 12px;
 } */
+
 /* school  */
+
 .school {
   width: 100%;
   padding: 20px 0px;
-  background-color: black;
+  background-color: rgba(53, 19, 69, 0.589) ;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -91,18 +137,40 @@ main .main-intro {
 }
 .school-text h2 {
   flex-basis: 800px;
+  
 }
 /* ux18skills */
 .column {
   float: left;
   width: 25%;
   padding: 0 10px;
+ 
+}
+.Prototyping img{
+  background-color:#fff;
+  border-radius: 20px;
+  width:200px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+.Usability-Testing img{
+  background-color:#fff;
+  border-radius: 20px;
+  width:200px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+.storyboarding img{
+  background-color: #fff;
+  border-radius: 20px;
+  width:200px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 .Skills {
+  /* background-color: white; */
   display: flex;
   margin: 0 -5px;
   flex-direction: column;
   gap: 40px;
+  
 }
 .Project {
   display: flex;
@@ -110,12 +178,31 @@ main .main-intro {
   flex-direction: row;
   gap: 40px;
   padding: 50px;
+background: linear-gradient(2deg, #686893 0%, rgba(47, 16, 61, 0.589) 100%);
 }
 
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+.card-container button{
+  background-color:rgb(192, 184, 194) ;
+  border-radius: 12px;
+  border: none;
+  color: rgb(107, 11, 103) ;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.card-container button:hover {
+  color: rgb(234, 227, 237);
+  background-color: rgba(178, 9, 193, 0.951);
+  transition-duration: 0.5s;
 }
 .card {
   padding: 16px;
@@ -129,13 +216,16 @@ main .main-intro {
 }
 
 /* Projects */
+
 .myWork {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 .myWork h1 {
   margin-bottom: 60px;
+  color:#000;
 }
 .Project {
   display: flex;
@@ -150,28 +240,42 @@ main .main-intro {
   border: 1px;
   width: 85%;
   margin: auto;
-}
-.card-1 {
-  justify-content: space-between;
-  display: flex;
-  background-color: black;
-  border: 5px;
-}
-.card-image-1 {
-  width: 30%;
+ 
 }
 .card-image-1 img {
   width: 100%;
   min-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  
 }
+.card-1 {
+  justify-content: space-between;
+  display: flex;
+  background-color: white;
+  border: 5px;
+  
+}
+.card-image-1 {
+  width: 40%;
+  padding:60px;
+   
+}
+
 .card-text-1 {
-  width: 70%;
+  width: 60%;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.card-text-1 h2 {
+  color:black;
+}
+  .card-text-1 p {
+  color:black;
+  }
 .cardBackground {
   width: 100%;
   background-color: white;
@@ -184,14 +288,19 @@ main .main-intro {
   border: 5px;
 }
 .card-image-2 {
-  width: 30%;
+  width: 40%;
+  padding:60px;
+  
 }
+
 .card-image-2 img {
   width: 100%;
   min-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 .card-text-2 {
-  width: 70%;
+  width: 60%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -207,21 +316,35 @@ main .main-intro {
 .card-3 {
   justify-content: space-between;
   display: flex;
-  background-color: black;
+  background-color: white ;
   border: 5px;
 }
 .card-image-3 {
-  width: 30%;
+  width: 40%;
+  padding:60px;
 }
 .card-image-3 img {
   width: 100%;
   min-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
 .card-text-3 {
-  width: 70%;
+  width: 60%;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.card-text-3 h2 {
+  color:black;
+}
+  .card-text-3 p {
+  color:black;
+  }
+.card-container {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0px;
 }
